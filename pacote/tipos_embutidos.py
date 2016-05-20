@@ -63,3 +63,24 @@ vogais = set('aeiou')
 print(renzo_chars & vogais)  # interseção
 print(renzo_chars - vogais)  # Diferença
 print(renzo_chars.union(vogais))  # União
+
+# Dicionário
+
+estados = {'RN': 'Rio Grande do Norte', 'SP': 'São Paulo'}
+
+print(estados['RN'])
+estados['RJ']= 'Rio de Janeiro'
+print(estados)
+
+
+for chave in estados:  # mesmo resultado de have in estados.keys()
+    print(chave)
+
+for valor in estados.values():
+    print(valor)
+
+for chave, valor in estados.items(): # Utilizando desempacotamento de tupla
+    print(chave, valor, sep=' --- ')
+
+
+
