@@ -16,17 +16,18 @@ def media(*numeros):
     :return: Número com média
     '''
     n = len(numeros)
-    if n == 0:
-        return 0
-
-    md = 0
-    for i in numeros:
-        md += i
-    return md / n
+    # md = 0
+    # for i in numeros:
+    #     md += i
+    # return md / n
+    print(numeros)
+    return sum(numeros) / n
 
 
 if __name__ == '__main__':
-    print(media())
     print(media(1))
     print(media(1, 2))
     print(media(1, 2, 3))
+    lista = list(range(10))
+    print(media(*lista))
+    # print(media())
