@@ -9,6 +9,8 @@ lista.append(7)
 print(lista)
 print(list(range(10)))
 
+print(lista + [8, 9])  # permite concatenação
+
 frutas = 'banana melancia abacate maça'.split()
 print(frutas)
 
@@ -47,3 +49,17 @@ print(primeiro, ultimos)
 
 # Conjuntos
 
+elementos_repetidos = list(range(100)) * 2
+print(elementos_repetidos)
+print(set(elementos_repetidos))
+renzo_chars = set('renzo')
+print(renzo_chars)  # Não mantém ordem
+
+print('r' in renzo_chars)
+print('a' in renzo_chars)
+
+vogais = set('aeiou')
+
+print(renzo_chars & vogais)  # interseção
+print(renzo_chars - vogais)  # Diferença
+print(renzo_chars.union(vogais))  # União
