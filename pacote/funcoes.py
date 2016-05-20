@@ -24,6 +24,10 @@ def media(*numeros):
     return sum(numeros) / n
 
 
+def argumentos_var_por_nome(*args, **kwargs):
+    print(args, kwargs)
+
+
 if __name__ == '__main__':
     print(media(1))
     print(media(1, 2))
@@ -31,3 +35,12 @@ if __name__ == '__main__':
     lista = list(range(10))
     print(media(*lista))
     # print(media())
+
+    argumentos_var_por_nome()
+    argumentos_var_por_nome(1, 2, 3, nome='Renzo')
+    argumentos_var_por_nome(7, 6, 5, nome='Renzo', idade=33)
+
+    leonardo = {'nome': 'Leonardo', 'idade': 18}
+
+    argumentos_var_por_nome(leonardo)  # será primeiro parâmetro do *argos
+    argumentos_var_por_nome(**leonardo)  # Elementos serão inseridos em kwargs
