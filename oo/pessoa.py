@@ -22,6 +22,9 @@ class Pessoa(object):
             raise ValueError('Não é possível utilizar valores negativos')
         self._preco = preco
 
+    def exercer_atividade_de_aula(self):
+        raise NotImplementedError()
+
 if __name__ == '__main__':
 
     renzo = Pessoa('Renzo', 33)

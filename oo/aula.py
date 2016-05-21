@@ -35,3 +35,10 @@ if __name__ == '__main__':
 
     for pessoa in turma:
         print(pessoa.cumprimentar())
+        if isinstance(pessoa, Aluno):
+            print(pessoa.estudar())
+        elif isinstance(pessoa, Instrutor):
+            print(pessoa.ensinar())
+
+        if isinstance(pessoa, Pessoa):
+            print('Exerceu atividade')
