@@ -68,3 +68,7 @@ target/
 
 venv/*
 
+# Tudo no virtualenv menos o requirements
+
+!venv/requirements.txt
+
