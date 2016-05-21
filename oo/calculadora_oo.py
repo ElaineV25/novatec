@@ -19,10 +19,13 @@ class Calculadora:
         return operacao_escolhida.calcular(self._arg1, self._arg2)
 
     def obter_entradas_e_calcular(self):
+        self.obter_entradas()
+        return self.executar_operacao()
+
+    def obter_entradas(self):
         self._arg1 = float(input('Digite o primeiro valor: '))
         self._sinal = input('Digite o sinal da operação: ')
         self._arg2 = float(input('Digite o segundo valor: '))
-        return self.executar_operacao()
 
 
 class Adicao(Operacao):
