@@ -5,9 +5,11 @@ class Subtracao(Operacao):
     def calcular(self, arg1, arg2):
         return arg1 - arg2
 
+
 class Multiplicao(Operacao):
     def calcular(self, arg1, arg2):
         return arg1 * arg2
+
 
 class CalculadoraPolonesaReversa(Calculadora):
     def obter_entradas(self):
@@ -19,7 +21,7 @@ class CalculadoraPolonesaReversa(Calculadora):
 if __name__ == '__main__':
     calculadora = CalculadoraPolonesaReversa()
     sub = Subtracao()
-    mul=Multiplicao()
+    mul = Multiplicao()
     calculadora.adicionar_operacao('-', sub)
     calculadora.adicionar_operacao('*', mul)
     print(calculadora.obter_entradas_e_calcular())
