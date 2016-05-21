@@ -10,6 +10,9 @@ class Aluno(Pessoa):
     def cumprimentar(this, prefixo='E aí galera!'):
         return super().cumprimentar(prefixo)
 
+    def exercer_atividade_de_aula(self):
+        return self.estudar()
+
 
 class Instrutor(Pessoa):
     def ensinar(self):
@@ -21,6 +24,9 @@ class Instrutor(Pessoa):
         fim = time()
         print('Demorou {} milisegundos'.format(fim - inicio))
         return resultado
+
+    def exercer_atividade_de_aula(self):
+        return self.ensinar()
 
 
 if __name__ == '__main__':
@@ -35,10 +41,4 @@ if __name__ == '__main__':
 
     for pessoa in turma:
         print(pessoa.cumprimentar())
-        if isinstance(pessoa, Aluno):
-            print(pessoa.estudar())
-        elif isinstance(pessoa, Instrutor):
-            print(pessoa.ensinar())
-
-        if isinstance(pessoa, Pessoa):
-            print('Exerceu atividade')
+        print(pessoa.exercer_atividade_de_aula())
