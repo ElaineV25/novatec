@@ -1,4 +1,4 @@
-class Pessoa:
+class Pessoa(object):
     olhos = 2
 
     def __init__(self, nome, idade=18, preco=0.00):
